@@ -1,0 +1,75 @@
+/* Custom Styles for Beautiful Web App */
+
+/* General Body Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f9fa; /* Light background for contrast */
+  margin: 0;
+  padding: 0;
+}
+
+/* Header Styles */
+header {
+  background-color: #007bff; /* Bootstrap primary color */
+  color: white;
+}
+
+/* Navbar Styles */
+.navbar {
+  margin-bottom: 20px; /* Space below the navbar */
+}
+
+/* Card Styles */
+.card {
+  border: none; /* Remove default border */
+  border-radius: 10px; /* Rounded corners */
+  transition: transform 0.2s; /* Smooth hover effect */
+}
+
+.card:hover {
+  transform: scale(1.05); /* Scale effect on hover */
+}
+
+/* Modal Styles */
+.modal-content {
+  border-radius: 10px; /* Rounded corners for modal */
+}
+
+/* Responsive Image Styles */
+.img-fluid {
+  max-width: 100%;
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Flex Container Class for Side-by-Side Layouts */
+.flex-siphon-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-siphon-container .column {
+  width: 48%; /* Two columns side by side with space in between */
+}
+
+/* Utility Classes */
+.mt-4 {
+  margin-top: 1.5rem !important; /* Custom margin-top utility */
+}
+
+.mb-4 {
+  margin-bottom: 1.5rem !important; /* Custom margin-bottom utility */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .flex-siphon-container {
+      flex-direction: column; /* Stack columns on smaller screens */
+      align-items: flex-start; /* Align items to the start */
+  }
+
+  .flex-siphon-container .column {
+      width: 100%; /* Full width for columns on small screens */
+      margin-bottom: 20px; /* Space between stacked columns */
+  }
+}
