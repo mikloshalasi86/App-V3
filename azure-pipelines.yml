@@ -30,6 +30,13 @@ steps:
     projects: '**/*.csproj'
     arguments: '--configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)'
 
+- task: PowerShell@2
+  displayName: "Copy Terraform Files"
+  inputs:
+    targetType: 'inline'
+    script: |
+      Copy-Item -Path "$(Build.SourcesDirectory)/terraform/*" -Destination "$(System.DefaultWorkingDirectory)/terraform" -Recurse -Force
+
 - task: PublishBuildArtifacts@1
   displayName: 'Publish Artifacts'
   inputs:
