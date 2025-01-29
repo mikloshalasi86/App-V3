@@ -30,6 +30,12 @@ steps:
     projects: '**/*.csproj'
     arguments: '--configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)'
 
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: '$(Build.SourcesDirectory)/terraform'
+    Contents: '**'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)/terraform'
+
 - task: PublishBuildArtifacts@1
   displayName: 'Publish Artifacts'
   inputs:
