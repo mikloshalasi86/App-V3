@@ -35,7 +35,7 @@ steps:
   inputs:
     targetType: 'inline'
     script: |
-      Copy-Item -Path "$(Build.SourcesDirectory)/terraform/*" -Destination "$(System.DefaultWorkingDirectory)/terraform" -Recurse -Force
+      Copy-Item -Path "$(Build.SourcesDirectory)/terraform/*" -Destination "$(System.DefaultWorkingDirectory)" -Recurse -Force
 
 - task: PublishBuildArtifacts@1
   displayName: 'Publish Artifacts'
