@@ -1,20 +1,9 @@
-variable "environment" {
-  type = string
-}
- 
 variable "resource_group_name" {
-  type = string
+  description = "The name of the resource group."
+  type        = string
 }
- 
+
 variable "location" {
-  type = string
-  default = "canada central"
-}
- 
-variable "functionapp_storage_account_name" {
-  type = string
-}
- 
-variable "azurerm_windows_function_app_name" {
-  type = string
+  description = "The location for all resources."
+  type        = string
 }
