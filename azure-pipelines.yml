@@ -42,6 +42,12 @@ steps:
   inputs:
     terraformVersion: '1.10.5'
 
+- task: TerraformTaskV1@0
+  displayName: "Terraform: init"
+  inputs:
+    command: 'init'
+    workingDirectory: '$(System.DefaultWorkingDirectory)/terraform'
+
 - task: PublishBuildArtifacts@1
   displayName: 'Publish Artifacts'
   inputs:
